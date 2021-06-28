@@ -1,0 +1,577 @@
+2021-06-28 15:25:22.175  INFO 26480 --- [main] com.user.wallet.WalletApplication        : Starting WalletApplication using Java 1.8.0_144 on Nero-Mac.local with PID 26480 (/Users/kaushalverma/Downloads/wallet/target/classes started by kaushalverma in /Users/kaushalverma/Downloads/wallet)
+2021-06-28 15:25:22.183  INFO 26480 --- [main] com.user.wallet.WalletApplication        : No active profile set, falling back to default profiles: default
+2021-06-28 15:25:24.569  INFO 26480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-28 15:25:24.700  INFO 26480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 3 JPA repository interfaces.
+2021-06-28 15:25:27.345  INFO 26480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@21eee94f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 15:25:27.496  INFO 26480 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 15:25:29.118  INFO 26480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-06-28 15:25:29.182  INFO 26480 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-28 15:25:29.183  INFO 26480 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-28 15:25:29.445  INFO 26480 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-28 15:25:29.446  INFO 26480 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7036 ms
+2021-06-28 15:25:29.992  INFO 26480 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-28 15:25:30.210  INFO 26480 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-06-28 15:25:30.540  INFO 26480 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-28 15:25:30.867  INFO 26480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-28 15:25:31.301  INFO 26480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-28 15:25:31.349  INFO 26480 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-06-28 15:25:33.409  INFO 26480 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-28 15:25:33.433  INFO 26480 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 15:25:34.836  WARN 26480 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-28 15:25:35.635  INFO 26480 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-28 15:25:36.235  INFO 26480 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-06-28 15:25:36.235  INFO 26480 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-06-28 15:25:36.236  INFO 26480 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-06-28 15:25:36.236  INFO 26480 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/**'] with []
+2021-06-28 15:25:36.236  INFO 26480 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-06-28 15:25:36.237  INFO 26480 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/public'] with []
+2021-06-28 15:25:36.237  INFO 26480 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**/**'] with []
+2021-06-28 15:25:36.326  INFO 26480 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55bafbc1, org.springframework.security.web.context.SecurityContextPersistenceFilter@580c4c0b, org.springframework.security.web.header.HeaderWriterFilter@1dfd6023, org.springframework.security.web.authentication.logout.LogoutFilter@6fe33512, com.user.wallet.security.JwtTokenFilter@24bc06dd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bc44d78, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c2dab10, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@26d02dc6, org.springframework.security.web.session.SessionManagementFilter@195888a6, org.springframework.security.web.access.ExceptionTranslationFilter@91c11b6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ef0bc5b]
+2021-06-28 15:25:36.583  INFO 26480 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-28 15:25:37.058  INFO 26480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-06-28 15:25:37.060  INFO 26480 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-06-28 15:25:37.106  INFO 26480 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-06-28 15:25:37.185  INFO 26480 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-06-28 15:25:37.528  INFO 26480 --- [main] com.user.wallet.WalletApplication        : Started WalletApplication in 16.848 seconds (JVM running for 17.998)
+2021-06-28 15:25:37.589  INFO 26480 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-28 15:25:37.594  INFO 26480 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 15:25:37.596  INFO 26480 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-06-28 15:25:37.613  INFO 26480 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-06-28 15:25:37.618  INFO 26480 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-06-28 15:25:43.030  INFO 26483 --- [main] com.user.wallet.WalletApplication        : Starting WalletApplication using Java 1.8.0_144 on Nero-Mac.local with PID 26483 (/Users/kaushalverma/Downloads/wallet/target/classes started by kaushalverma in /Users/kaushalverma/Downloads/wallet)
+2021-06-28 15:25:43.038  INFO 26483 --- [main] com.user.wallet.WalletApplication        : No active profile set, falling back to default profiles: default
+2021-06-28 15:25:45.326  INFO 26483 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-28 15:25:45.481  INFO 26483 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136 ms. Found 3 JPA repository interfaces.
+2021-06-28 15:25:46.269  INFO 26483 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3330f3ad' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 15:25:46.280  INFO 26483 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 15:25:46.874  INFO 26483 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-06-28 15:25:46.898  INFO 26483 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-28 15:25:46.899  INFO 26483 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-28 15:25:47.114  INFO 26483 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-28 15:25:47.115  INFO 26483 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3872 ms
+2021-06-28 15:25:47.600  INFO 26483 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-28 15:25:47.796  INFO 26483 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-06-28 15:25:48.119  INFO 26483 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-28 15:25:48.431  INFO 26483 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-28 15:25:48.855  INFO 26483 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-28 15:25:48.903  INFO 26483 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-06-28 15:25:51.948  INFO 26483 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-28 15:25:51.990  INFO 26483 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 15:25:53.607  WARN 26483 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-28 15:25:54.665  INFO 26483 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-28 15:25:55.312  INFO 26483 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-06-28 15:25:55.313  INFO 26483 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-06-28 15:25:55.313  INFO 26483 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-06-28 15:25:55.314  INFO 26483 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/**'] with []
+2021-06-28 15:25:55.314  INFO 26483 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-06-28 15:25:55.315  INFO 26483 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/public'] with []
+2021-06-28 15:25:55.315  INFO 26483 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**/**'] with []
+2021-06-28 15:25:55.411  INFO 26483 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2662e3ff, org.springframework.security.web.context.SecurityContextPersistenceFilter@1dfd6023, org.springframework.security.web.header.HeaderWriterFilter@eef6e, org.springframework.security.web.authentication.logout.LogoutFilter@6c38f4de, com.user.wallet.security.JwtTokenFilter@487ee2a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e7da4cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d00e30e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@682482ee, org.springframework.security.web.session.SessionManagementFilter@91c11b6, org.springframework.security.web.access.ExceptionTranslationFilter@495e1ad1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6662974a]
+2021-06-28 15:25:55.697  INFO 26483 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-28 15:25:56.324  INFO 26483 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-06-28 15:25:56.326  INFO 26483 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-06-28 15:25:56.381  INFO 26483 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-06-28 15:25:56.461  INFO 26483 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-06-28 15:25:56.891  INFO 26483 --- [main] com.user.wallet.WalletApplication        : Started WalletApplication in 15.261 seconds (JVM running for 16.776)
+2021-06-28 15:32:00.250  INFO 26483 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-28 15:32:00.258  INFO 26483 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 15:32:00.259  INFO 26483 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-06-28 15:32:00.277  INFO 26483 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-06-28 15:32:00.282  INFO 26483 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-06-28 15:32:12.561  INFO 26514 --- [main] com.user.wallet.WalletApplication        : Starting WalletApplication using Java 1.8.0_144 on Nero-Mac.local with PID 26514 (/Users/kaushalverma/Downloads/wallet/target/classes started by kaushalverma in /Users/kaushalverma/Downloads/wallet)
+2021-06-28 15:32:12.572  INFO 26514 --- [main] com.user.wallet.WalletApplication        : No active profile set, falling back to default profiles: default
+2021-06-28 15:32:14.963  INFO 26514 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-28 15:32:15.115  INFO 26514 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 3 JPA repository interfaces.
+2021-06-28 15:32:15.865  INFO 26514 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@53c1179a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 15:32:15.878  INFO 26514 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 15:32:16.476  INFO 26514 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-06-28 15:32:16.499  INFO 26514 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-28 15:32:16.499  INFO 26514 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-28 15:32:16.685  INFO 26514 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-28 15:32:16.686  INFO 26514 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3883 ms
+2021-06-28 15:32:17.206  INFO 26514 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-28 15:32:17.470  INFO 26514 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-06-28 15:32:17.775  INFO 26514 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-28 15:32:18.043  INFO 26514 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-28 15:32:18.473  INFO 26514 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-28 15:32:18.516  INFO 26514 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-06-28 15:32:20.987  INFO 26514 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-28 15:32:21.007  INFO 26514 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 15:32:22.991  WARN 26514 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-28 15:32:24.369  INFO 26514 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-28 15:32:25.024  INFO 26514 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-06-28 15:32:25.024  INFO 26514 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-06-28 15:32:25.025  INFO 26514 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-06-28 15:32:25.025  INFO 26514 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/**'] with []
+2021-06-28 15:32:25.025  INFO 26514 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-06-28 15:32:25.025  INFO 26514 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/public'] with []
+2021-06-28 15:32:25.026  INFO 26514 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**/**'] with []
+2021-06-28 15:32:25.133  INFO 26514 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45e68fac, org.springframework.security.web.context.SecurityContextPersistenceFilter@195888a6, org.springframework.security.web.header.HeaderWriterFilter@91c11b6, org.springframework.security.web.authentication.logout.LogoutFilter@2f2a5064, com.user.wallet.security.JwtTokenFilter@5fb0a09e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@580c4c0b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44103266, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@732bb49d, org.springframework.security.web.session.SessionManagementFilter@5d00e30e, org.springframework.security.web.access.ExceptionTranslationFilter@427c2c96, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f3f0d25]
+2021-06-28 15:32:25.482  INFO 26514 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-28 15:32:26.085  INFO 26514 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-06-28 15:32:26.087  INFO 26514 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-06-28 15:32:26.137  INFO 26514 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-06-28 15:32:26.217  INFO 26514 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-06-28 15:32:26.695  INFO 26514 --- [main] com.user.wallet.WalletApplication        : Started WalletApplication in 15.461 seconds (JVM running for 16.622)
+2021-06-28 15:32:33.975  INFO 26514 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-28 15:32:33.977  INFO 26514 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-28 15:32:33.980  INFO 26514 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-06-28 15:32:34.244  INFO 26514 --- [http-nio-8084-exec-1] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nntn
+2021-06-28 15:33:08.165  INFO 26514 --- [http-nio-8084-exec-2] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 2, and body : WalletAddMoneyInputModel(userId=null, amount=200)
+2021-06-28 15:33:08.178 ERROR 26514 --- [http-nio-8084-exec-2] c.u.wallet.service.impl.WalletService    : Wallet details not found for user id : 2
+2021-06-28 15:41:15.476  INFO 26514 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-28 15:41:15.487  INFO 26514 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 15:41:15.487  INFO 26514 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-06-28 15:41:15.509  INFO 26514 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-06-28 15:41:15.515  INFO 26514 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-06-28 15:41:28.457  INFO 26547 --- [main] com.user.wallet.WalletApplication        : Starting WalletApplication using Java 1.8.0_144 on Nero-Mac.local with PID 26547 (/Users/kaushalverma/Downloads/wallet/target/classes started by kaushalverma in /Users/kaushalverma/Downloads/wallet)
+2021-06-28 15:41:28.487  INFO 26547 --- [main] com.user.wallet.WalletApplication        : No active profile set, falling back to default profiles: default
+2021-06-28 15:41:32.593  INFO 26547 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-28 15:41:32.936  INFO 26547 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 315 ms. Found 3 JPA repository interfaces.
+2021-06-28 15:41:35.526  INFO 26547 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@40f35e52' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 15:41:35.542  INFO 26547 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 15:41:36.883  INFO 26547 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-06-28 15:41:36.911  INFO 26547 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-28 15:41:36.911  INFO 26547 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-28 15:41:37.104  INFO 26547 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-28 15:41:37.104  INFO 26547 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8459 ms
+2021-06-28 15:41:37.605  INFO 26547 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-28 15:41:37.860  INFO 26547 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-06-28 15:41:38.241  INFO 26547 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-28 15:41:38.595  INFO 26547 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-28 15:41:39.208  INFO 26547 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-28 15:41:39.299  INFO 26547 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-06-28 15:41:42.009  INFO 26547 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-28 15:41:42.041  INFO 26547 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 15:41:44.004  WARN 26547 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-28 15:41:44.996  INFO 26547 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-28 15:41:45.623  INFO 26547 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-06-28 15:41:45.630  INFO 26547 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-06-28 15:41:45.630  INFO 26547 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-06-28 15:41:45.631  INFO 26547 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/**'] with []
+2021-06-28 15:41:45.632  INFO 26547 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-06-28 15:41:45.632  INFO 26547 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/public'] with []
+2021-06-28 15:41:45.654  INFO 26547 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**/**'] with []
+2021-06-28 15:41:45.822  INFO 26547 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@cbaabfb, org.springframework.security.web.context.SecurityContextPersistenceFilter@74159dc9, org.springframework.security.web.header.HeaderWriterFilter@222dc36c, org.springframework.security.web.authentication.logout.LogoutFilter@29811d4d, com.user.wallet.security.JwtTokenFilter@48614fb3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@254210b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b6b8cea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4eb3b690, org.springframework.security.web.session.SessionManagementFilter@641255d1, org.springframework.security.web.access.ExceptionTranslationFilter@662b199, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e21c6ed]
+2021-06-28 15:41:46.408  INFO 26547 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-28 15:41:47.017  INFO 26547 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-06-28 15:41:47.020  INFO 26547 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-06-28 15:41:47.077  INFO 26547 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-06-28 15:41:47.175  INFO 26547 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-06-28 15:41:47.713  INFO 26547 --- [main] com.user.wallet.WalletApplication        : Started WalletApplication in 21.944 seconds (JVM running for 25.004)
+2021-06-28 15:48:52.564  INFO 26547 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-28 15:48:52.568  INFO 26547 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-28 15:48:52.574  INFO 26547 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-06-28 15:49:43.252  INFO 26547 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-28 15:49:43.263  INFO 26547 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 15:49:43.265  INFO 26547 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-06-28 15:49:43.292  INFO 26547 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-06-28 15:49:43.311  INFO 26547 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-06-28 15:49:52.526  INFO 26603 --- [main] com.user.wallet.WalletApplication        : Starting WalletApplication using Java 1.8.0_144 on Nero-Mac.local with PID 26603 (/Users/kaushalverma/Downloads/wallet/target/classes started by kaushalverma in /Users/kaushalverma/Downloads/wallet)
+2021-06-28 15:49:52.535  INFO 26603 --- [main] com.user.wallet.WalletApplication        : No active profile set, falling back to default profiles: default
+2021-06-28 15:49:55.264  INFO 26603 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-28 15:49:55.440  INFO 26603 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 3 JPA repository interfaces.
+2021-06-28 15:49:56.580  INFO 26603 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@75e27856' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 15:49:56.611  INFO 26603 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 15:49:57.553  INFO 26603 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-06-28 15:49:57.578  INFO 26603 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-28 15:49:57.579  INFO 26603 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-28 15:49:57.747  INFO 26603 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-28 15:49:57.747  INFO 26603 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4955 ms
+2021-06-28 15:49:57.876  INFO 26603 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-28 15:49:58.411  INFO 26603 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-28 15:49:58.431  INFO 26603 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test_db'
+2021-06-28 15:49:58.833  INFO 26603 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-28 15:49:58.970  INFO 26603 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-06-28 15:49:59.376  INFO 26603 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-28 15:49:59.747  INFO 26603 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-06-28 15:50:01.770  INFO 26603 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-28 15:50:01.795  INFO 26603 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 15:50:03.228  WARN 26603 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-28 15:50:04.182  INFO 26603 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-28 15:50:04.807  INFO 26603 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-06-28 15:50:04.808  INFO 26603 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-06-28 15:50:04.808  INFO 26603 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-06-28 15:50:04.808  INFO 26603 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/**'] with []
+2021-06-28 15:50:04.809  INFO 26603 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-06-28 15:50:04.809  INFO 26603 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/public'] with []
+2021-06-28 15:50:04.809  INFO 26603 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**/**'] with []
+2021-06-28 15:50:04.901  INFO 26603 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28d37d43, org.springframework.security.web.context.SecurityContextPersistenceFilter@c194c4e, org.springframework.security.web.header.HeaderWriterFilter@70ca8e72, org.springframework.security.web.authentication.logout.LogoutFilter@577dac16, com.user.wallet.security.JwtTokenFilter@2c02cf78, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ba50851, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@425a5c2e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e7fc07e, org.springframework.security.web.session.SessionManagementFilter@1f4de96e, org.springframework.security.web.access.ExceptionTranslationFilter@5032b2e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3f7bf0f6]
+2021-06-28 15:50:05.209  INFO 26603 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-28 15:50:05.743  INFO 26603 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-06-28 15:50:05.745  INFO 26603 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-06-28 15:50:05.803  INFO 26603 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-06-28 15:50:05.879  INFO 26603 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-06-28 15:50:06.278  INFO 26603 --- [main] com.user.wallet.WalletApplication        : Started WalletApplication in 15.055 seconds (JVM running for 16.345)
+2021-06-28 15:50:17.396  INFO 26603 --- [http-nio-8084-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-28 15:50:17.397  INFO 26603 --- [http-nio-8084-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-28 15:50:17.400  INFO 26603 --- [http-nio-8084-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-06-28 15:51:10.593  INFO 26603 --- [http-nio-8084-exec-3] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nntn
+2021-06-28 15:51:31.649  INFO 26603 --- [http-nio-8084-exec-2] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnvvtn
+2021-06-28 15:52:08.897  INFO 26603 --- [http-nio-8084-exec-2] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 2, and body : WalletAddMoneyInputModel(userId=null, amount=200)
+2021-06-28 15:52:28.094  INFO 26603 --- [http-nio-8084-exec-6] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 1, and body : WalletAddMoneyInputModel(userId=null, amount=600)
+2021-06-28 15:52:46.656  INFO 26603 --- [http-nio-8084-exec-5] c.u.wallet.controller.WalletController   : API endpoint sendMoney hit with body : WalletSendMoneyInputModel(senderUserId=1, receiverUserId=2, amount=20)
+2021-06-28 15:53:56.636  WARN 26603 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m28s93ms).
+2021-06-28 15:54:40.407  INFO 26603 --- [http-nio-8084-exec-16] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 1, and body : WalletAddMoneyInputModel(userId=null, amount=6000)
+2021-06-28 16:00:06.031  INFO 26603 --- [http-nio-8084-exec-1] c.u.wallet.controller.WalletController   : API endpoint sendMoney hit with body : WalletSendMoneyInputModel(senderUserId=1, receiverUserId=2, amount=20000)
+2021-06-28 16:00:06.036 ERROR 26603 --- [http-nio-8084-exec-1] c.u.wallet.service.impl.WalletService    : Incorrect amount 20000, Please check your balance before transaction : 
+2021-06-28 16:39:38.988  WARN 26603 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m10s255ms).
+2021-06-28 17:45:01.754  INFO 26603 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-28 17:45:01.769  INFO 26603 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 17:45:01.773  INFO 26603 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-06-28 17:45:01.805  INFO 26603 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-06-28 17:45:01.816  INFO 26603 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-06-28 17:45:12.706  INFO 26935 --- [main] com.user.wallet.WalletApplication        : Starting WalletApplication using Java 1.8.0_144 on Nero-Mac.local with PID 26935 (/Users/kaushalverma/Downloads/wallet/target/classes started by kaushalverma in /Users/kaushalverma/Downloads/wallet)
+2021-06-28 17:45:12.717  INFO 26935 --- [main] com.user.wallet.WalletApplication        : No active profile set, falling back to default profiles: default
+2021-06-28 17:45:15.490  INFO 26935 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-28 17:45:15.638  INFO 26935 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 3 JPA repository interfaces.
+2021-06-28 17:45:16.548  INFO 26935 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@30893e08' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 17:45:16.559  INFO 26935 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 17:45:17.316  INFO 26935 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-06-28 17:45:17.343  INFO 26935 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-28 17:45:17.344  INFO 26935 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-28 17:45:17.561  INFO 26935 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-28 17:45:17.561  INFO 26935 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4494 ms
+2021-06-28 17:45:17.690  INFO 26935 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-28 17:45:18.307  INFO 26935 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-28 17:45:18.327  INFO 26935 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test_db'
+2021-06-28 17:45:18.790  INFO 26935 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-28 17:45:19.042  INFO 26935 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-06-28 17:45:19.451  INFO 26935 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-28 17:45:19.813  INFO 26935 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-06-28 17:45:22.039  INFO 26935 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-28 17:45:22.065  INFO 26935 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 17:45:23.595  WARN 26935 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-28 17:45:24.722  INFO 26935 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-28 17:45:25.370  INFO 26935 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-06-28 17:45:25.371  INFO 26935 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-06-28 17:45:25.371  INFO 26935 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-06-28 17:45:25.372  INFO 26935 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/**'] with []
+2021-06-28 17:45:25.372  INFO 26935 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-06-28 17:45:25.372  INFO 26935 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/public'] with []
+2021-06-28 17:45:25.372  INFO 26935 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**/**'] with []
+2021-06-28 17:45:25.472  INFO 26935 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22e650e, org.springframework.security.web.context.SecurityContextPersistenceFilter@240e61, org.springframework.security.web.header.HeaderWriterFilter@258ac1e6, org.springframework.security.web.authentication.logout.LogoutFilter@53570fff, com.user.wallet.security.JwtTokenFilter@30a79476, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2027d56f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@648f48d3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@376bae20, org.springframework.security.web.session.SessionManagementFilter@7925e772, org.springframework.security.web.access.ExceptionTranslationFilter@756030e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fb42efa]
+2021-06-28 17:45:25.817  INFO 26935 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-28 17:45:26.407  INFO 26935 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-06-28 17:45:26.409  INFO 26935 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-06-28 17:45:26.479  INFO 26935 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-06-28 17:45:26.582  INFO 26935 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-06-28 17:45:27.003  INFO 26935 --- [main] com.user.wallet.WalletApplication        : Started WalletApplication in 15.595 seconds (JVM running for 17.313)
+2021-06-28 17:45:50.254  INFO 26935 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-28 17:45:50.255  INFO 26935 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-28 17:45:50.258  INFO 26935 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-06-28 17:45:50.523  INFO 26935 --- [http-nio-8084-exec-1] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnvvtn
+2021-06-28 17:46:58.956  INFO 26935 --- [http-nio-8084-exec-4] com.user.wallet.security.MyUserDetails   : User not exist for username : nntn
+2021-06-28 17:46:58.970 ERROR 26935 --- [http-nio-8084-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+org.springframework.security.core.userdetails.UsernameNotFoundException: nntn user not exist
+	at com.user.wallet.security.MyUserDetails.loadUserByUsername(MyUserDetails.java:24) ~[classes/:na]
+	at com.user.wallet.security.JwtTokenProvider.getAuthentication(JwtTokenProvider.java:67) ~[classes/:na]
+	at com.user.wallet.security.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:29) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.4.2.jar:5.4.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.3.jar:5.3.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_144]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_144]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_144]
+
+2021-06-28 17:47:15.760  INFO 26935 --- [http-nio-8084-exec-1] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnvvtn
+2021-06-28 17:47:15.766 ERROR 26935 --- [http-nio-8084-exec-1] c.user.wallet.service.impl.UserService   : Username already used for username : nnvvtn
+2021-06-28 17:47:22.569  INFO 26935 --- [http-nio-8084-exec-5] c.user.wallet.controller.UserController  : API endpoint getUser hit with username : nntn
+2021-06-28 17:47:22.573 ERROR 26935 --- [http-nio-8084-exec-5] c.user.wallet.service.impl.UserService   : user does not exist for username : nntn
+2021-06-28 17:47:29.716  INFO 26935 --- [http-nio-8084-exec-10] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 17:47:29.830 ERROR 26935 --- [http-nio-8084-exec-10] c.u.w.e.WalletResponseEntityException    : Something went wrong
+2021-06-28 17:47:44.108  INFO 26935 --- [http-nio-8084-exec-4] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 17:47:44.114 ERROR 26935 --- [http-nio-8084-exec-4] c.u.w.e.WalletResponseEntityException    : Something went wrong
+2021-06-28 17:47:52.399  INFO 26935 --- [http-nio-8084-exec-1] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 1, and body : WalletAddMoneyInputModel(userId=null, amount=6000)
+2021-06-28 17:47:55.829  INFO 26935 --- [http-nio-8084-exec-5] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 17:47:55.835 ERROR 26935 --- [http-nio-8084-exec-5] c.u.w.e.WalletResponseEntityException    : Something went wrong
+2021-06-28 17:47:56.708  INFO 26935 --- [http-nio-8084-exec-2] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 17:47:56.713 ERROR 26935 --- [http-nio-8084-exec-2] c.u.w.e.WalletResponseEntityException    : Something went wrong
+2021-06-28 17:48:09.682  INFO 26935 --- [http-nio-8084-exec-9] c.user.wallet.controller.UserController  : API endpoint getUser hit with username : nnvvtn
+2021-06-28 17:48:14.653  INFO 26935 --- [http-nio-8084-exec-3] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 17:48:14.657 ERROR 26935 --- [http-nio-8084-exec-3] c.u.w.e.WalletResponseEntityException    : Something went wrong
+2021-06-28 17:48:40.330  INFO 26935 --- [http-nio-8084-exec-7] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 17:48:40.336 ERROR 26935 --- [http-nio-8084-exec-7] c.u.w.e.WalletResponseEntityException    : Something went wrong
+2021-06-28 17:48:45.389  INFO 26935 --- [http-nio-8084-exec-6] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 17:49:13.349 ERROR 26935 --- [http-nio-8084-exec-6] c.u.w.e.WalletResponseEntityException    : Something went wrong
+2021-06-28 17:49:34.380  INFO 26935 --- [http-nio-8084-exec-10] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 17:49:58.274 ERROR 26935 --- [http-nio-8084-exec-10] c.u.w.e.WalletResponseEntityException    : Something went wrong
+2021-06-28 17:50:00.020  INFO 26935 --- [http-nio-8084-exec-8] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 17:50:03.206 ERROR 26935 --- [http-nio-8084-exec-8] c.u.w.e.WalletResponseEntityException    : Something went wrong
+2021-06-28 17:50:42.874  INFO 26935 --- [http-nio-8084-exec-4] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 17:54:18.735  WARN 26935 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m50s451ms).
+2021-06-28 17:54:18.737 ERROR 26935 --- [http-nio-8084-exec-4] c.u.w.e.WalletResponseEntityException    : Something went wrong
+2021-06-28 17:54:18.972  INFO 26935 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-28 17:54:18.998  INFO 26935 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 17:54:19.005  INFO 26935 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-06-28 17:54:19.071  INFO 26935 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-06-28 17:54:19.090  INFO 26935 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-06-28 17:54:27.696  INFO 26962 --- [main] com.user.wallet.WalletApplication        : Starting WalletApplication using Java 1.8.0_144 on Nero-Mac.local with PID 26962 (/Users/kaushalverma/Downloads/wallet/target/classes started by kaushalverma in /Users/kaushalverma/Downloads/wallet)
+2021-06-28 17:54:27.713  INFO 26962 --- [main] com.user.wallet.WalletApplication        : No active profile set, falling back to default profiles: default
+2021-06-28 17:54:29.887  INFO 26962 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-28 17:54:30.034  INFO 26962 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 130 ms. Found 3 JPA repository interfaces.
+2021-06-28 17:54:30.862  INFO 26962 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@79aee22a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 17:54:30.878  INFO 26962 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 17:54:31.554  INFO 26962 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-06-28 17:54:31.578  INFO 26962 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-28 17:54:31.578  INFO 26962 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-28 17:54:31.781  INFO 26962 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-28 17:54:31.781  INFO 26962 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3898 ms
+2021-06-28 17:54:31.932  INFO 26962 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-28 17:54:32.429  INFO 26962 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-28 17:54:32.446  INFO 26962 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test_db'
+2021-06-28 17:54:32.887  INFO 26962 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-28 17:54:33.016  INFO 26962 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-06-28 17:54:33.377  INFO 26962 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-28 17:54:33.737  INFO 26962 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-06-28 17:54:35.908  INFO 26962 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-28 17:54:35.944  INFO 26962 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 17:54:37.726  WARN 26962 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-28 17:54:38.786  INFO 26962 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-28 17:54:39.435  INFO 26962 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-06-28 17:54:39.436  INFO 26962 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-06-28 17:54:39.437  INFO 26962 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-06-28 17:54:39.440  INFO 26962 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/**'] with []
+2021-06-28 17:54:39.441  INFO 26962 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-06-28 17:54:39.441  INFO 26962 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/public'] with []
+2021-06-28 17:54:39.442  INFO 26962 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**/**'] with []
+2021-06-28 17:54:39.604  INFO 26962 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@267309f7, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b84d03d, org.springframework.security.web.header.HeaderWriterFilter@5de14222, org.springframework.security.web.authentication.logout.LogoutFilter@1390a43a, com.user.wallet.security.JwtTokenFilter@46878216, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e1d813a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76efa2b7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b69ff13, org.springframework.security.web.session.SessionManagementFilter@58a0f75b, org.springframework.security.web.access.ExceptionTranslationFilter@701da311, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e353e1d]
+2021-06-28 17:54:40.405  INFO 26962 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-28 17:54:41.225  INFO 26962 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-06-28 17:54:41.227  INFO 26962 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-06-28 17:54:41.280  INFO 26962 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-06-28 17:54:41.360  INFO 26962 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-06-28 17:54:41.815  INFO 26962 --- [main] com.user.wallet.WalletApplication        : Started WalletApplication in 15.5 seconds (JVM running for 17.01)
+2021-06-28 17:56:33.361  INFO 26962 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-28 17:56:33.368  INFO 26962 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-28 17:56:33.370  INFO 26962 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-28 17:56:33.723  INFO 26962 --- [http-nio-8084-exec-1] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnvvtn
+2021-06-28 17:57:01.804  INFO 26962 --- [http-nio-8084-exec-2] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 17:57:27.096  INFO 26962 --- [http-nio-8084-exec-3] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 1, and body : WalletAddMoneyInputModel(userId=null, amount=6000)
+2021-06-28 17:57:37.679  INFO 26962 --- [http-nio-8084-exec-4] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 18:01:01.034  INFO 26962 --- [http-nio-8084-exec-6] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnvyvtn
+2021-06-28 18:01:04.134  INFO 26962 --- [http-nio-8084-exec-7] c.u.wallet.controller.WalletController   : API endpoint sendMoney hit with body : WalletSendMoneyInputModel(senderUserId=1, receiverUserId=2, amount=20000)
+2021-06-28 18:01:04.138 ERROR 26962 --- [http-nio-8084-exec-7] c.u.wallet.service.impl.WalletService    : Incorrect amount 20000, Please check your balance before transaction : 
+2021-06-28 18:01:08.721  INFO 26962 --- [http-nio-8084-exec-8] c.u.wallet.controller.WalletController   : API endpoint sendMoney hit with body : WalletSendMoneyInputModel(senderUserId=1, receiverUserId=2, amount=200)
+2021-06-28 18:01:12.431  INFO 26962 --- [http-nio-8084-exec-9] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 1, and body : WalletAddMoneyInputModel(userId=null, amount=6000)
+2021-06-28 18:01:15.024  INFO 26962 --- [http-nio-8084-exec-10] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 18:01:21.891  INFO 26962 --- [http-nio-8084-exec-1] c.u.wallet.controller.WalletController   : API endpoint getPassbook hit with user id : 2
+2021-06-28 18:01:27.173  INFO 26962 --- [http-nio-8084-exec-2] c.u.wallet.controller.WalletController   : API endpoint getPassbook hit with user id : 1
+2021-06-28 18:01:31.118  INFO 26962 --- [http-nio-8084-exec-3] c.u.wallet.controller.WalletController   : API endpoint getPassbook hit with user id : 1
+2021-06-28 18:01:32.046  INFO 26962 --- [http-nio-8084-exec-4] c.u.wallet.controller.WalletController   : API endpoint getPassbook hit with user id : 1
+2021-06-28 18:01:59.710  INFO 26962 --- [http-nio-8084-exec-5] c.u.wallet.controller.WalletController   : API endpoint sendMoney hit with body : WalletSendMoneyInputModel(senderUserId=2, receiverUserId=1, amount=100)
+2021-06-28 18:02:01.945  INFO 26962 --- [http-nio-8084-exec-6] c.u.wallet.controller.WalletController   : API endpoint getPassbook hit with user id : 1
+2021-06-28 18:02:08.431  INFO 26962 --- [http-nio-8084-exec-7] c.u.wallet.controller.WalletController   : API endpoint getPassbook hit with user id : 2
+2021-06-28 18:09:03.705  INFO 26962 --- [http-nio-8084-exec-9] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnvyyvtn
+2021-06-28 18:09:21.297  INFO 26962 --- [http-nio-8084-exec-10] c.u.wallet.controller.WalletController   : API endpoint sendMoney hit with body : WalletSendMoneyInputModel(senderUserId=1, receiverUserId=3, amount=100)
+2021-06-28 18:09:29.159  INFO 26962 --- [http-nio-8084-exec-1] c.u.wallet.controller.WalletController   : API endpoint getPassbook hit with user id : 1
+2021-06-28 18:12:10.573  INFO 26962 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-28 18:12:10.583  INFO 26962 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 18:12:10.585  INFO 26962 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-06-28 18:12:10.609  INFO 26962 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-06-28 18:12:10.615  INFO 26962 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-06-28 18:12:22.572  INFO 27032 --- [main] com.user.wallet.WalletApplication        : Starting WalletApplication using Java 1.8.0_144 on Nero-Mac.local with PID 27032 (/Users/kaushalverma/Downloads/wallet/target/classes started by kaushalverma in /Users/kaushalverma/Downloads/wallet)
+2021-06-28 18:12:22.580  INFO 27032 --- [main] com.user.wallet.WalletApplication        : No active profile set, falling back to default profiles: default
+2021-06-28 18:12:24.992  INFO 27032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-28 18:12:25.143  INFO 27032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 3 JPA repository interfaces.
+2021-06-28 18:12:26.288  INFO 27032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@208f0007' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 18:12:26.302  INFO 27032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 18:12:27.108  INFO 27032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-06-28 18:12:27.135  INFO 27032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-28 18:12:27.136  INFO 27032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-28 18:12:27.338  INFO 27032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-28 18:12:27.339  INFO 27032 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4598 ms
+2021-06-28 18:12:27.471  INFO 27032 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-28 18:12:28.163  INFO 27032 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-28 18:12:28.178  INFO 27032 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test_db'
+2021-06-28 18:12:28.633  INFO 27032 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-28 18:12:28.784  INFO 27032 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-06-28 18:12:29.158  INFO 27032 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-28 18:12:29.636  INFO 27032 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-06-28 18:12:32.146  INFO 27032 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-28 18:12:32.192  INFO 27032 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 18:12:33.859  WARN 27032 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-28 18:12:34.774  INFO 27032 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-28 18:12:35.357  INFO 27032 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-06-28 18:12:35.358  INFO 27032 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-06-28 18:12:35.358  INFO 27032 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-06-28 18:12:35.359  INFO 27032 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/**'] with []
+2021-06-28 18:12:35.359  INFO 27032 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-06-28 18:12:35.360  INFO 27032 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/public'] with []
+2021-06-28 18:12:35.362  INFO 27032 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**/**'] with []
+2021-06-28 18:12:35.459  INFO 27032 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3857c5d5, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ca464bb, org.springframework.security.web.header.HeaderWriterFilter@3328db4f, org.springframework.security.web.authentication.logout.LogoutFilter@20dc763b, com.user.wallet.security.JwtTokenFilter@237824b0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46f041cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a18e68a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52a8f789, org.springframework.security.web.session.SessionManagementFilter@6e5df971, org.springframework.security.web.access.ExceptionTranslationFilter@d8a2b1b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@68aa1164]
+2021-06-28 18:12:35.750  INFO 27032 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-28 18:12:36.211  INFO 27032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-06-28 18:12:36.213  INFO 27032 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-06-28 18:12:36.263  INFO 27032 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-06-28 18:12:36.345  INFO 27032 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-06-28 18:12:36.721  INFO 27032 --- [main] com.user.wallet.WalletApplication        : Started WalletApplication in 15.812 seconds (JVM running for 18.578)
+2021-06-28 18:12:48.538  INFO 27032 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-28 18:12:48.540  INFO 27032 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-28 18:12:48.542  INFO 27032 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-06-28 18:12:48.763  INFO 27032 --- [http-nio-8084-exec-1] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnvyyvtn
+2021-06-28 18:13:11.391  INFO 27032 --- [http-nio-8084-exec-2] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnvyyyvtn
+2021-06-28 18:13:18.470  INFO 27032 --- [http-nio-8084-exec-3] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnvtn
+2021-06-28 18:13:24.035  INFO 27032 --- [http-nio-8084-exec-4] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnvggytn
+2021-06-28 18:13:31.365  INFO 27032 --- [http-nio-8084-exec-5] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 1, and body : WalletAddMoneyInputModel(userId=null, amount=600)
+2021-06-28 18:13:35.307  INFO 27032 --- [http-nio-8084-exec-6] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 1, and body : WalletAddMoneyInputModel(userId=null, amount=800)
+2021-06-28 18:13:39.705  INFO 27032 --- [http-nio-8084-exec-7] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 1, and body : WalletAddMoneyInputModel(userId=null, amount=900)
+2021-06-28 18:14:06.264  INFO 27032 --- [http-nio-8084-exec-8] c.u.wallet.controller.WalletController   : API endpoint getPassbook hit with user id : 1
+2021-06-28 18:14:06.288 ERROR 27032 --- [http-nio-8084-exec-8] c.u.wallet.service.impl.WalletService    : No transaction found for user id : 1
+2021-06-28 18:23:26.516  INFO 27032 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-28 18:23:26.525  INFO 27032 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 18:23:26.526  INFO 27032 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-06-28 18:23:26.547  INFO 27032 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-06-28 18:23:26.552  INFO 27032 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-06-28 18:23:36.105  INFO 27049 --- [main] com.user.wallet.WalletApplication        : Starting WalletApplication using Java 1.8.0_144 on Nero-Mac.local with PID 27049 (/Users/kaushalverma/Downloads/wallet/target/classes started by kaushalverma in /Users/kaushalverma/Downloads/wallet)
+2021-06-28 18:23:36.112  INFO 27049 --- [main] com.user.wallet.WalletApplication        : No active profile set, falling back to default profiles: default
+2021-06-28 18:23:38.514  INFO 27049 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-28 18:23:38.724  INFO 27049 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 188 ms. Found 3 JPA repository interfaces.
+2021-06-28 18:23:39.691  INFO 27049 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@f5ce0bb' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 18:23:39.704  INFO 27049 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 18:23:40.478  INFO 27049 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-06-28 18:23:40.530  INFO 27049 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-28 18:23:40.531  INFO 27049 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-28 18:23:40.825  INFO 27049 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-28 18:23:40.826  INFO 27049 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4549 ms
+2021-06-28 18:23:41.180  INFO 27049 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-28 18:23:41.922  INFO 27049 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-28 18:23:41.968  INFO 27049 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test_db'
+2021-06-28 18:23:42.399  INFO 27049 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-28 18:23:42.509  INFO 27049 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-06-28 18:23:42.916  INFO 27049 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-28 18:23:43.297  INFO 27049 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-06-28 18:23:45.639  INFO 27049 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-28 18:23:45.661  INFO 27049 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 18:23:47.276  WARN 27049 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-28 18:23:48.238  INFO 27049 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-28 18:23:48.810  INFO 27049 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-06-28 18:23:48.810  INFO 27049 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-06-28 18:23:48.810  INFO 27049 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-06-28 18:23:48.810  INFO 27049 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/**'] with []
+2021-06-28 18:23:48.811  INFO 27049 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-06-28 18:23:48.811  INFO 27049 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/public'] with []
+2021-06-28 18:23:48.811  INFO 27049 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**/**'] with []
+2021-06-28 18:23:48.913  INFO 27049 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a778943, org.springframework.security.web.context.SecurityContextPersistenceFilter@62f3ad90, org.springframework.security.web.header.HeaderWriterFilter@923bf67, org.springframework.security.web.authentication.logout.LogoutFilter@78a7fccd, com.user.wallet.security.JwtTokenFilter@7925e772, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e6bd43b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@308e465b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@365a4b9b, org.springframework.security.web.session.SessionManagementFilter@6fe33512, org.springframework.security.web.access.ExceptionTranslationFilter@6c38f4de, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@41d8ac75]
+2021-06-28 18:23:49.207  INFO 27049 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-28 18:23:49.665  INFO 27049 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-06-28 18:23:49.667  INFO 27049 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-06-28 18:23:49.724  INFO 27049 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-06-28 18:23:49.802  INFO 27049 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-06-28 18:23:50.183  INFO 27049 --- [main] com.user.wallet.WalletApplication        : Started WalletApplication in 15.439 seconds (JVM running for 16.793)
+2021-06-28 18:24:01.238  INFO 27049 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-28 18:24:01.239  INFO 27049 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-28 18:24:01.243  INFO 27049 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-06-28 18:24:01.497  INFO 27049 --- [http-nio-8084-exec-1] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnvggytn
+2021-06-28 18:24:35.971  INFO 27049 --- [http-nio-8084-exec-2] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnggtn
+2021-06-28 18:24:40.986  INFO 27049 --- [http-nio-8084-exec-3] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnggn
+2021-06-28 18:24:53.141  INFO 27049 --- [http-nio-8084-exec-4] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 1, and body : WalletAddMoneyInputModel(userId=null, amount=900)
+2021-06-28 18:24:56.241  INFO 27049 --- [http-nio-8084-exec-5] c.u.wallet.controller.WalletController   : API endpoint getPassbook hit with user id : 1
+2021-06-28 18:25:08.511  INFO 27049 --- [http-nio-8084-exec-6] c.u.wallet.controller.WalletController   : API endpoint sendMoney hit with body : WalletSendMoneyInputModel(senderUserId=1, receiverUserId=3, amount=100)
+2021-06-28 18:25:10.411  INFO 27049 --- [http-nio-8084-exec-7] c.u.wallet.controller.WalletController   : API endpoint getPassbook hit with user id : 1
+2021-06-28 18:42:36.225  INFO 27049 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-28 18:42:36.233  INFO 27049 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 18:42:36.234  INFO 27049 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-06-28 18:42:36.252  INFO 27049 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-06-28 18:42:36.257  INFO 27049 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-06-28 18:42:45.382  INFO 27073 --- [main] com.user.wallet.WalletApplication        : Starting WalletApplication using Java 1.8.0_144 on Nero-Mac.local with PID 27073 (/Users/kaushalverma/Downloads/wallet/target/classes started by kaushalverma in /Users/kaushalverma/Downloads/wallet)
+2021-06-28 18:42:45.390  INFO 27073 --- [main] com.user.wallet.WalletApplication        : No active profile set, falling back to default profiles: default
+2021-06-28 18:42:47.414  INFO 27073 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-06-28 18:42:47.550  INFO 27073 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 3 JPA repository interfaces.
+2021-06-28 18:42:48.438  INFO 27073 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1a47a1e8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 18:42:48.450  INFO 27073 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-28 18:42:49.230  INFO 27073 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-06-28 18:42:49.254  INFO 27073 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-28 18:42:49.255  INFO 27073 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-06-28 18:42:49.427  INFO 27073 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-28 18:42:49.427  INFO 27073 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3893 ms
+2021-06-28 18:42:49.550  INFO 27073 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-28 18:42:50.121  INFO 27073 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-28 18:42:50.137  INFO 27073 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test_db'
+2021-06-28 18:42:50.525  INFO 27073 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-06-28 18:42:50.635  INFO 27073 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-06-28 18:42:50.952  INFO 27073 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-06-28 18:42:51.257  INFO 27073 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-06-28 18:42:53.040  INFO 27073 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-06-28 18:42:53.063  INFO 27073 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-06-28 18:42:54.337  WARN 27073 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-28 18:42:55.172  INFO 27073 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-06-28 18:42:55.742  INFO 27073 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-06-28 18:42:55.743  INFO 27073 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-06-28 18:42:55.743  INFO 27073 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-06-28 18:42:55.744  INFO 27073 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/configuration/**'] with []
+2021-06-28 18:42:55.744  INFO 27073 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/webjars/**'] with []
+2021-06-28 18:42:55.744  INFO 27073 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/public'] with []
+2021-06-28 18:42:55.744  INFO 27073 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Ant [pattern='/h2-console/**/**'] with []
+2021-06-28 18:42:55.834  INFO 27073 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27b84c9a, org.springframework.security.web.context.SecurityContextPersistenceFilter@37823482, org.springframework.security.web.header.HeaderWriterFilter@3e574f9c, org.springframework.security.web.authentication.logout.LogoutFilter@58267ba1, com.user.wallet.security.JwtTokenFilter@21abd3a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f4b8027, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65293ca5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d514259, org.springframework.security.web.session.SessionManagementFilter@d164938, org.springframework.security.web.access.ExceptionTranslationFilter@4f8641d1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6a9f8c2f]
+2021-06-28 18:42:56.133  INFO 27073 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-28 18:42:56.640  INFO 27073 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-06-28 18:42:56.641  INFO 27073 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-06-28 18:42:56.688  INFO 27073 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-06-28 18:42:56.771  INFO 27073 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-06-28 18:42:57.141  INFO 27073 --- [main] com.user.wallet.WalletApplication        : Started WalletApplication in 13.051 seconds (JVM running for 14.38)
+2021-06-28 18:44:25.666  INFO 27073 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-28 18:44:25.668  INFO 27073 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-28 18:44:25.682  INFO 27073 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2021-06-28 18:44:25.938  INFO 27073 --- [http-nio-8084-exec-1] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nnggn
+2021-06-28 18:44:58.855  INFO 27073 --- [http-nio-8084-exec-2] c.user.wallet.controller.UserController  : API endpoint userSignup hit with username : nngn
+2021-06-28 18:45:03.081  INFO 27073 --- [http-nio-8084-exec-3] c.user.wallet.controller.UserController  : API endpoint getUser hit with username : nnvvtn
+2021-06-28 18:45:03.083 ERROR 27073 --- [http-nio-8084-exec-3] c.user.wallet.service.impl.UserService   : user does not exist for username : nnvvtn
+2021-06-28 18:45:09.604  INFO 27073 --- [http-nio-8084-exec-4] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 18:45:17.561  INFO 27073 --- [http-nio-8084-exec-5] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 1, and body : WalletAddMoneyInputModel(userId=null, amount=-900)
+2021-06-28 18:45:17.562 ERROR 27073 --- [http-nio-8084-exec-5] c.u.wallet.service.impl.WalletService    : Entered amount must be positive for user id : 1
+2021-06-28 18:45:35.450  INFO 27073 --- [http-nio-8084-exec-7] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 1, and body : WalletAddMoneyInputModel(userId=null, amount=100)
+2021-06-28 18:45:43.055  INFO 27073 --- [http-nio-8084-exec-8] c.u.wallet.controller.WalletController   : API endpoint addMoney hit with user id : 1, and body : WalletAddMoneyInputModel(userId=null, amount=0)
+2021-06-28 18:45:43.057 ERROR 27073 --- [http-nio-8084-exec-8] c.u.wallet.service.impl.WalletService    : Entered amount must be positive for user id : 1
+2021-06-28 18:45:47.226  INFO 27073 --- [http-nio-8084-exec-9] c.u.wallet.controller.WalletController   : API endpoint getWallet hit with user id : 1
+2021-06-28 18:45:57.429  INFO 27073 --- [http-nio-8084-exec-10] c.u.wallet.controller.WalletController   : API endpoint sendMoney hit with body : WalletSendMoneyInputModel(senderUserId=1, receiverUserId=3, amount=10)
+2021-06-28 18:45:57.434 ERROR 27073 --- [http-nio-8084-exec-10] c.u.wallet.service.impl.WalletService    : Receiver wallet details not found for user id : 3
+2021-06-28 18:46:05.870  INFO 27073 --- [http-nio-8084-exec-1] c.u.wallet.controller.WalletController   : API endpoint sendMoney hit with body : WalletSendMoneyInputModel(senderUserId=1, receiverUserId=2, amount=10)
+2021-06-28 18:46:19.094  INFO 27073 --- [http-nio-8084-exec-2] c.u.wallet.controller.WalletController   : API endpoint sendMoney hit with body : WalletSendMoneyInputModel(senderUserId=1, receiverUserId=2, amount=-10)
+2021-06-28 18:46:19.096 ERROR 27073 --- [http-nio-8084-exec-2] c.u.wallet.service.impl.WalletService    : Entered amount must be positive for user id : 1
+2021-06-28 18:46:23.220  INFO 27073 --- [http-nio-8084-exec-3] c.u.wallet.controller.WalletController   : API endpoint getPassbook hit with user id : 1
+2021-06-28 18:50:42.040  WARN 27073 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m51s774ms).
